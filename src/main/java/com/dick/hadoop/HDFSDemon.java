@@ -23,6 +23,7 @@ public class HDFSDemon
     	FileSystem  fs =  FileSystem.get(new URI("hdfs://eshoop-cache01:9000"), new Configuration());
     	InputStream in = fs.open(new Path("/words"));
     	OutputStream out  =  new FileOutputStream("D://words");
+    	System.out.println();
     	IOUtils.copyBytes(in, out, 4096,true);
     }
 }
